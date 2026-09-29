@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Shreya ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#09060d;color:#fff;min-height:100vh;overflow:hidden}body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#ff4f9c33,transparent 32%),radial-gradient(circle at 85% 80%,#7c4dff22,transparent 30%),linear-gradient(135deg,#09060d,#2b1024,#09060d);z-index:-2}.app{min-height:100vh;display:grid;place-items:center;padding:18px}.card{width:min(760px,100%);min-height:650px;padding:30px 20px;border:1px solid #ffffff22;border-radius:32px;background:#ffffff0b;backdrop-filter:blur(20px);box-shadow:0 30px 100px #000b;text-align:center;overflow:auto}.top{font-size:11px;letter-spacing:3px;color:#ffc3e1}.bar{height:5px;background:linear-gradient(90deg,#ff55a5,#ffe0ef);width:12.5%;transition:.5s;border-radius:99px;margin-top:16px}.screen{display:none;animation:in .55s}.screen.active{display:block}.icon{font-size:65px;margin:35px 0 8px}h1{font-size:clamp(38px,9vw,68px);margin:0}h2{font-size:clamp(28px,6vw,42px)}p{font-size:17px;line-height:1.8;color:#e4d7e1}.pink{color:#ffc6e3;font-weight:800}.btn{border:0;border-radius:999px;padding:15px 26px;margin:9px;background:linear-gradient(135deg,#ffe0ee,#ff82bb);color:#351024;font-weight:900;cursor:pointer;font-size:16px;box-shadow:0 10px 30px #ff579044}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:600px;margin:25px auto}.choice{padding:18px;border:1px solid #ffffff18;border-radius:20px;background:#ffffff0a;cursor:pointer}.choice:hover{background:#ff75b51d}.letter{max-width:600px;margin:20px auto;padding:24px;text-align:left;line-height:1.9;border-radius:22px;background:#0003;border:1px solid #ffffff12}.secret{display:none}.result{font-size:25px;font-weight:900;color:#ffd1e7}.float{position:fixed;inset:0;pointer-events:none;z-index:5}.float span{position:absolute;bottom:-40px;animation:rise linear forwards}@keyframes in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes rise{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}@media(max-width:540px){.choices{grid-template-columns:1fr}.card{min-height:620px;padding:25px 15px}}
+</style>
+</head>
+<body>
+<div class="float" id="float"></div>
+<div class="app"><main class="card">
+<div class="top">A LITTLE SECRET FOR SHREYA • ❤️</div>
+<div class="bar" id="bar"></div>
+
+<section class="screen active">
+<div class="icon">🌙✨</div><h1>Shreya…</h1>
+<p>Ek normal message bhejna tha…<br>phir laga ki <span class="pink">tum normal ho hi nahi.</span> ❤️</p>
+<button class="btn" onclick="next()">Open This ❤️</button>
+</section>
+
+<section class="screen">
+<div class="icon">🌸</div><h2>Why You?</h2>
+<p>Because some people simply make ordinary moments feel special.</p>
+<div class="choices"><div class="choice">😊 Your smile</div><div class="choice">✨ Your vibe</div><div class="choice">🫶 Your presence</div><div class="choice">💗 Just… you</div></div>
+<button class="btn" onclick="next()">There is more…</button>
+</section>
+
+<section class="screen">
+<div class="icon">🎮</div><h2>Shreya's Little Quiz</h2>
+<p>Choose the answer you think I mean.</p>
+<div class="choices">
+<div class="choice" onclick="quiz()">Someone I admire ❤️</div>
+<div class="choice" onclick="quiz()">Someone I want to know better 💗</div>
+<div class="choice" onclick="quiz()">Someone special ✨</div>
+<div class="choice" onclick="quiz()">All of the above 🥹</div>
+</div><p id="qm" class="pink"></p>
+</section>
+
+<section class="screen">
+<div class="icon">💌</div><h2>A Little Confession</h2>
+<div class="letter">
+<p>Shreya, kabhi-kabhi kisi person ke saath baat karte hue pata hi nahi chalta ki kab woh person <b>important</b> ban gaya.</p>
+<p>Bas itna pata chalta hai ki uska message dekh kar smile aa jaati hai, usse baat karne ka mann karta hai, aur dheere-dheere uski presence matter karne lagti hai.</p>
+<p class="pink">I think… that happened with you. ❤️</p>
+</div><button class="btn" onclick="next()">One more thing… 🥺</button>
+</section>
+
+<section class="screen">
+<div class="icon">🔐</div><h2>Secret Message</h2>
+<p>Is button ke andar woh baat hai jo main directly bolne se nervous ho raha hoon. 😭</p>
+<button class="btn" onclick="secret()">Unlock 🔓</button>
+<div id="secret" class="secret letter">
+<p>Shreya… ❤️</p>
+<p>I don't want to make this complicated. I just want to be honest.</p>
+<p>Tum mujhe genuinely pasand ho. Tumhare saath aur memories banana, aur tumhe aur better jaan-na chahta hoon.</p>
+<p class="pink">And now comes the question I've been hiding…</p>
+<button class="btn" onclick="next()">Ask me. 💍</button>
+</div>
+</section>
+
+<section class="screen">
+<div class="icon">💍❤️</div><h1>Shreya…</h1>
+<p class="pink" style="font-size:22px">Will you give me a chance to make something beautiful with you?</p>
+<p>No pressure. No forced answer. Bas dil se jo feel ho, wahi choose karna. 🤍</p>
+<div class="choices"><div class="choice" onclick="answer('yes')">❤️ YES</div><div class="choice" onclick="answer('think')">🥹 Let me think</div></div>
+<p id="ans" class="result"></p><button id="finalBtn" class="btn" style="display:none" onclick="next()">One last surprise ✨</button>
+</section>
+
+<section class="screen">
+<div class="icon">🥹❤️</div><h2>Whatever Your Answer…</h2>
+<div class="letter">
+<p>Thank you for reading all the way till here, Shreya. ❤️</p>
+<p>If you said yes, then maybe this is the beginning of something really beautiful. 🌸</p>
+<p>If you need time, that's okay too. Your comfort matters more than an instant answer.</p>
+<p class="pink">But one thing I wanted you to know today:</p>
+<p class="result">You are genuinely special to me. ❤️</p>
+</div><button class="btn" onclick="celebrate()">✨ Send a Smile</button>
+<p id="end" class="pink"></p>
+</section>
+</main></div>
+
+<script>
+let i=0,s=document.querySelectorAll('.screen'),bar=document.getElementById('bar');
+function next(){if(i<s.length-1){s[i].classList.remove('active');i++;s[i].classList.add('active');bar.style.width=((i+1)/s.length*100)+'%';scrollTo({top:0,behavior:'smooth'})}}
+function quiz(){document.getElementById('qm').textContent='Correct answer: All of the above… obviously. 🥹❤️';setTimeout(next,1000)}
+function secret(){document.getElementById('secret').style.display='block'}
+function answer(x){document.getElementById('ans').textContent=x==='yes'?'🥹❤️ YES?! You just made this moment unforgettable.':'🤍 Take your time. I respect your answer and your space.';document.getElementById('finalBtn').style.display='inline-block';if(x==='yes')burst()}
+function celebrate(){document.getElementById('end').textContent='SMILE RECEIVED FROM SHREYA ❤️✨';burst()}
+function burst(){for(let k=0;k<45;k++){let x=document.createElement('span');x.textContent=['❤️','💗','💕','✨','🌸','🫶🏻'][Math.floor(Math.random()*6)];x.style.left=Math.random()*100+'%';x.style.fontSize=(15+Math.random()*25)+'px';x.style.animationDuration=(3+Math.random()*4)+'s';document.getElementById('float').appendChild(x);setTimeout(()=>x.remove(),7500)}}
+</script>
+</body></html>
